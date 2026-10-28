@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lara Beauty — салон красоты</title>
+  <meta
+    name="description"
+    content="Учебный сайт салона красоты Lara Beauty: услуги, мастера и форма онлайн-записи."
+  >
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">
+        <span class="logo-icon">✦</span>
+        Lara<span class="logo-accent">Beauty</span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menu-button"
+        type="button"
+        aria-label="Открыть меню"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="navigation" id="navigation" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#about">О салоне</a>
+        <a href="#contacts">Контакты</a>
+        <a class="nav-booking" href="#booking">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+ 
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">ТВОЁ ВРЕМЯ ДЛЯ СЕБЯ</p>
+
+          <h1>
+            Красота начинается
+            <span>с заботы о себе</span>
+          </h1>
+
+          <p class="hero-description">
+            Стильные стрижки/
+            Пространство, где можно замедлиться и посвятить время себе.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#booking">
+              Записаться онлайн →
+            </a>
+            <a class="button button-outline" href="#services">
+              Наши услуги
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <span>✦ Опытные мастера</span>
+            <span>✦ Уютная атмосфера</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle"></div>
+
+          <div class="beauty-card">
+            <span class="beauty-symbol">✦</span>
+            <p class="beauty-small">Lara</p>
+            <p class="beauty-title">Beauty<br>is you.</p>
+            <span class="beauty-line"></span>
+            <p class="beauty-caption">Твоя естественная красота</p>
+          </div>
+
+          <div class="floating-note">
+            <span>♡</span>
+            <div>
+              <p>Забота в каждой детали</p>
+              <small>От встречи до последнего штриха</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ПРАЙС-ЛИСТ</p>
+          <h2>Наши услуги</h2>
+          <p>Выбери то, что подарит тебе хорошее настроение.</p>
+        </div>
+
+        <div class="filters" aria-label="Фильтр услуг">
+          <button
+            class="filter-button active"
+            type="button"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            Все услуги
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="hair"
+            aria-pressed="false"
+          >
+            Волосы
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="face"
+            aria-pressed="false"
+          >
+            Лицо
+          </button>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-category="hair">
+            <div class="service-icon">✂</div>
+            <h3>Женская стрижка</h3>
+            <p>Подбор формы, стрижка и лёгкая укладка.</p>
+            <div class="service-details">
+              <span>1 500 ₽</span>
+              <small>60 минут</small>
+            </div>
+            <button
+              class="service-link"
+              type="button"
+              data-service="haircut"
+            >
+              Записаться →
+            </button>
+          </article>
+
+          <article class="service-card" data-category="hair">
+            <div class="service-icon">◈</div>
+            <h3>Окрашивание</h3>
+            <p>Новый оттенок, свежий образ и бережный уход.</p>
+            <div class="service-details">
+              <span>от 3 500 ₽</span>
+              <small>120 минут</small>
+            </div>
+            <button
+              class="service-link"
+              type="button"
+              data-service="coloring"
+            >
+              Записаться →
+            </button>
+          </article>
+
+              Записаться →
+            </button>
+          </article>
+
+          <article class="service-card" data-category="face">
+            <div class="service-icon">☼</div>
+            <h3>Уход за лицом</h3>
+            <p>Очищение, увлажнение и расслабляющий уход.</p>
+            <div class="service-details">
+              <span>2 500 ₽</span>
+              <small>60 минут</small>
+            </div>
+            <button
+              class="service-link"
+              type="button"
+              data-service="care"
+            >
+              Записаться →
+            </button>
+          </article>
+
+          <article class="service-card" data-category="face">
+            <div class="service-icon">✧</div>
+            <h3>Макияж</h3>
+            <p>Гармоничный образ для особенного события.</p>
+            <div class="service-details">
+              <span>от 2 300 ₽</span>
+              <small>60 минут</small>
+            </div>
+            <button
+              class="service-link"
+              type="button"
+              data-service="makeup"
+            >
+              Записаться →
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+ 
+    <section class="section section-soft" id="masters">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">НАША КОМАНДА</p>
+          <h2>В надёжных руках</h2>
+          <p>Знакомься с мастерами Lara Beauty.</p>
+        </div>
+
+        <div class="masters-grid">
+          <article class="master-card">
+            <div class="master-avatar avatar-one">АС</div>
+            <h3>Екатерина</h3>
+            <p>Парикмахер-стилист</p>
+            <span class="experience">Опыт 8 лет</span>
+          </article>
+
+          
+          <article class="master-card">
+            <div class="master-avatar avatar-three">ЕИ</div>
+            <h3>Лара</h3>
+            <p>Визажист и стилист по волосам</p>
+            <span class="experience">Опыт 9 лет</span>
+          </article>
+
+
+          <article class="master-card">
+            <div class="master-avatar avatar-three">ЕИ</div>
+            <h3>Сара</h3>
+            <p>Визажист и стилист по волосам</p>
+            <span class="experience">Опыт 7 лет</span>
+          </article>
+
+          <article class="master-card">
+            <div class="master-avatar avatar-four">СП</div>
+            <h3>Айлана</h3>
+            <p>Визажист и стилист по волосам</p>
+            <span class="experience">Опыт 8 года</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+ 
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">НАША ФИЛОСОФИЯ</p>
+          <h2>Место, где тебе хорошо</h2>
+          <p class="about-description">
+            Lara Beauty — пространство для красоты и отдыха.
+            Мы уделяем внимание пожеланиям каждого гостя
+            и помогаем подобрать подходящий образ.
+          </p>
+          <a class="button button-outline" href="#booking">
+            Хочу к вам
+          </a>
+        </div>
+
+        <div class="benefits">
+          <article class="benefit">
+            <span>01</span>
+            <div>
+              <h3>Индивидуальный подход</h3>
+              <p>Обсуждаем пожелания перед процедурой.</p>
+            </div>
+          </article>
+
+          <article class="benefit">
+            <span>02</span>
+            <div>
+              <h3>Внимание к деталям</h3>
+              <p>Заботимся о комфорте на каждом этапе.</p>
+            </div>
+          </article>
+
+          <article class="benefit">
+            <span>03</span>
+            <div>
+              <h3>Удобная запись</h3>
+              <p>Выбирай услугу, дату и время в одной форме.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-description">
+          <p class="eyebrow">ДО ВСТРЕЧИ В Lara</p>
+          <h2>Время для твоей красоты</h2>
+          <p>
+            Выбери услугу и удобное время.
+            Форма проверит правильность заполнения заявки.
+          </p>
+
+          <div class="booking-note">
+            <h3>Перед записью</h3>
+            <ul>
+              <li>Салон работает ежедневно с 10:00 до 19:00.</li>
+              <li>Процедура должна закончиться до закрытия.</li>
+              <li>Запись на прошедшее время недоступна.</li>
+            </ul>
+          </div>
+
+          <p class="demo-note">
+            Учебный сайт: форма демонстрирует запись,
+            но не отправляет данные администратору.
+            Имена, цены и контакты приведены для примера.
+          </p>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <h3>Онлайн-запись</h3>
+
+          <div class="form-group">
+            <label for="client-name">Твоё имя</label>
+            <input
+              id="client-name"
+              name="name"
+              type="text"
+              placeholder="Как к тебе обращаться?"
+              autocomplete="given-name"
+              maxlength="60"
+              aria-describedby="name-error"
+              required
+            >
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="client-phone">Телефон</label>
+            <input
+              id="client-phone"
+              name="phone"
+              type="tel"
+              placeholder="+7 (999) 123-45-67"
+              autocomplete="tel"
+              maxlength="25"
+              aria-describedby="phone-error"
+              required
+            >
+            <p class="field-error" id="phone-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Услуга</label>
+            <select
+              id="service"
+              name="service"
+              aria-describedby="service-error"
+              required
+            >
+              <option value="">Выбери услугу</option>
+              <option value="haircut">Женская стрижка — 1 500 ₽</option>
+              <option value="coloring">Окрашивание — от 3 500 ₽</option>
+              <option value="care">Уход за лицом — 2 500 ₽</option>
+              <option value="makeup">Макияж — от 2 300 ₽</option>
+            </select>
+            <p class="field-error" id="service-error" aria-live="polite"></p>
+          </div>
+
+          <p class="service-summary" id="service-summary">
+            Выбери услугу, чтобы увидеть стоимость и длительность.
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Дата</label>
+              <input
+                id="date"
+                name="date"
+                type="date"
+                aria-describedby="date-error"
+                required
+              >
+              <p class="field-error" id="date-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Время</label>
+              <input
+                id="time"
+                name="time"
+                type="time"
+                min="10:00"
+                max="18:00"
+                step="60"
+                aria-describedby="time-error"
+                required
+              >
+              <p class="field-error" id="time-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <button class="button button-primary button-full" type="submit">
+            Подтвердить запись →
+          </button>
+
+          <p class="form-caption">
+            Демонстрация работы формы. Данные никуда не отправляются.
+          </p>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">БУДЕМ РАДЫ ВСТРЕЧЕ</p>
+          <h2>Как нас найти</h2>
+        </div>
+
+        <div class="contacts-grid">
+          <article class="contact-card">
+            <span>⌖</span>
+            <h3>Адрес</h3>
+            <p>г. Улан-Удэ, ул. Балтахинова, 36</p>
+          </article>
+
+          <article class="contact-card">
+            <span>☎</span>
+            <h3>Телефон</h3>
+            <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+          </article>
+
+          <article class="contact-card">
+            <span>◷</span>
+            <h3>Часы работы</h3>
+            <p>Ежедневно, 10:00–19:00</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo footer-logo" href="#home">Lara Beauty</a>
+
+      <div>
+        <p>Улан-Удэ · +7 (900) 123-45-67</p>
+        <p class="footer-caption">© 2026. Учебный проект салона красоты.</p>
+      </div>
+
+      <a href="#home">Наверх ↑</a>
+    </div>
+  </footer>
+
+ 
+  <dialog class="modal" id="booking-modal" aria-labelledby="modal-title">
+    <button
+      class="modal-close"
+      id="modal-close"
+      type="button"
+      aria-label="Закрыть окно"
+    >
+      ×
+    </button>
+
+    <div class="modal-icon">✓</div>
+    <h2 id="modal-title">Всё заполнено верно!</h2>
+    <p id="modal-text"></p>
+    <p class="modal-note">
+      Это демонстрационная запись. Заявка не отправлена в салон.
+    </p>
+    <button class="button button-primary" id="modal-ok" type="button">
+      Понятно
+    </button>
+  </dialog>
+</body>
+</html>
